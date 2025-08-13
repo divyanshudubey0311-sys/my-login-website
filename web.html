@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Prakhar's Web</title>
+  <style>
+    body {
+      background-color: skyblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: teal;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkcyan;
+    }
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Login</h2>
+  
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password atleat 4-digit"><br>
+  <button onclick="login()">Login</button>
+
+  <p id="message"></p>
+
+  
+  <script>
+    // List of users with their usernames and passwords
+    const users = [
+      { username: "prakhar", password: "2025" },
+      { username: "aditya", password: "4343" },
+      { username: "avantika", password: "2134" },
+      { username: "anjali", password: "2011" }
+    ];
+
+    function login() {
+      const enteredUsername = document.getElementById("username").value;
+      const enteredPassword = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      // Find if the entered username and password match any user
+      const user = users.find(user => user.username === enteredUsername && user.password === enteredPassword);
+
+      if (user) {
+        message.style.color = "green";
+        message.innerText = "✅ Login Successful! Welcome, " + enteredUsername;
+        // Redirect to a dashboard or home page after a successful login
+        setTimeout(() => {
+          window.location.href = "google.html";  // Change this to your desired page
+        }, 1000);
+      } else {
+        message.style.color = "red";
+        message.innerText = "❌ Invalid username or password!";
+      }
+    }
+	// Save login history
+const history = JSON.parse(localStorage.getItem("loginHistory")) || [];
+history.push({
+  username: enteredUsername,
+  time: new Date().toLocaleString()
+});
+localStorage.setItem("loginHistory", JSON.stringify(history));
+  </script>
+  <script>
+  const now = new Date();
+  document.write("📅 Today's Date: " + now.toLocaleDateString());
+</script>
+</body>
+</html>

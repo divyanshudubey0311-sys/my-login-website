@@ -1,0 +1,486 @@
+{<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findi</title>
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="6PRfxcFhpfpXctQt7Lh7IVIj8hKOPhn00-_WQkgGp4o" />
+  <!-- ✅ Firebase SDKs -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyCsgmtZt4JgCmB_JB68_8F2_h1rxin9f8o",
+      authDomain: "soogle-67f3c.firebaseapp.com",
+      projectId: "soogle-67f3c",
+      storageBucket: "soogle-67f3c.firebasestorage.app",
+      messagingSenderId: "322712885856",
+      appId: "1:322712885856:web:0123d64df84ad9e3a40105"
+    };
+    const app = initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+<div id="weather">🌤️ Loading weather...</div>
+<script>
+  async function showWeather() {
+    try {
+      const locRes = await fetch("https://ipapi.co/json/");
+      const locData = await locRes.json();
+      const city = locData.city;
+
+      const weatherRes = await fetch(`https://wttr.in/${city}?format=%C+%t`);
+      const weatherText = await weatherRes.text();
+
+      document.getElementById("weather").innerText = `📍 ${city}: ${weatherText}`;
+    } catch (error) {
+      document.getElementById("weather").innerText = "⚠️ Unable to fetch weather";
+    }
+  }
+
+  showWeather(); // Call function when page loads
+</script>
+<!-- Your website content remains below -->
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCsgmtZt4JgCmB_JB68_8F2_h1rxin9f8o",
+      authDomain: "soogle-67f3c.firebaseapp.com",
+      projectId: "soogle-67f3c",
+      storageBucket: "soogle-67f3c.firebasestorage.app",
+      messagingSenderId: "322712885856",
+      appId: "1:322712885856:web:0123d64df84ad9e3a40105"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</head>
+    <title>Findi</title>
+    <style>
+	@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.logo span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+.logo span:nth-child(2) { animation-delay: 0.1s; }
+.logo span:nth-child(3) { animation-delay: 0.2s; }
+.logo span:nth-child(4) { animation-delay: 0.3s; }
+.logo span:nth-child(5) { animation-delay: 0.4s; }
+.logo span:nth-child(6) { animation-delay: 0.5s; }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            color: #4285F4;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+        .logo span:nth-child(2) {
+            color: #EA4335;
+        }
+        .logo span:nth-child(3) {
+            color: #FBBC05;
+        }
+        .logo span:nth-child(4) {
+            color: #34A853;
+        }
+        .search-bar {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 24px;
+            outline: none;
+            box-shadow: none;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            color: #70757a;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            if (query) {
+                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(searchUrl, '_blank');
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+</head>
+  <head>
+    <title>Privacy Search</title>
+  </head>
+  <body style="text-align: center; padding-top: 100px;">
+    <h1 style="color: #4285F4;">👨‍💻 Welcome to Findi Terminal 💻 | Enter command: search --private 🔐 💀.It will be  not save your search history in GOOGLE.</h1>
+    <form action="https://duckduckgo.com/" target="_blank">
+      <input type="text" name="q" placeholder="Search privately..." style="padding: 10px; width: 300px;">
+      <button type="submit" style="padding: 10px;">Search</button>
+    </form>
+    <p>No cookies. No tracking. No history. 🔒</p>
+  </body>
+<body> 
+<script>
+<script>
+    const suggestionsList = [
+        "Best study timetable", "How to focus on study", "School admission 2025", "Top schools in India", 
+        "Class 6 syllabus", "Best books for JNVST", "NCERT Class 6", "Scholarship for Class 6 students",
+        "Current affairs 2025", "Who is the President of India", "ISRO latest news", "India's Chandrayaan mission",
+        "Why sky is blue", "Most populated country 2025", "Science project ideas", "Math tricks for kids",
+        "Periodic table song", "Physics easy concepts", "Area of circle formula", "LCM and HCF difference",
+        "What is solar system", "Types of energy", "English essay on my school", "Story in English for kids",
+        "Hindi poem on nature", "Opposite words list", "Simple English sentences", "Translate Hindi to English",
+        "Top movies 2025", "Most watched YouTube video", "Best cartoons for kids", "Minecraft download",
+        "Funny riddles with answers", "Brain games online", "Hanuman Chalisa lyrics", "Shree Krishna story",
+        "Ramayan in short", "Sanskrit quotes", "Sawan 2025 start date", "Raksha Bandhan story",
+        "National festivals of India", "Weather today", "Time in USA now", "How to set alarm", "Google Maps",
+        "Nearest hospital", "Train ticket booking", "Bus route to school", "How to make website", "HTML full form",
+        "How to download app", "Best coding app for kids", "AI meaning", "What is ChatGPT?", "Healthy food for students",
+        "Morning exercise routine", "Surya Namaskar steps", "Why drink water in morning", "Benefits of yoga", 
+        "Vitamins for kids", "Success quotes", "Motivational speech for students", "Abdul Kalam quotes", 
+        "How to become topper", "Study motivation song", "Never give up quotes"
+    ];
+
+    function showSuggestions() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const suggestionBox = document.getElementById("suggestions");
+        suggestionBox.innerHTML = "";
+
+        if (!input) return;
+
+        const filtered = suggestionsList.filter(item => item.toLowerCase().includes(input));
+        filtered.forEach(suggestion => {
+            const li = document.createElement("li");
+            li.textContent = suggestion;
+            li.onclick = () => {
+                document.getElementById("searchInput").value = suggestion;
+                suggestionBox.innerHTML = "";
+            };
+            suggestionBox.appendChild(li);
+        });
+    }
+
+    // Close suggestions when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest(".search-bar")) {
+            document.getElementById("suggestions").innerHTML = "";
+        }
+    });
+
+    function startListening() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-IN';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            document.getElementById('searchInput').value = event.results[0][0].transcript;
+        };
+    }
+</script>
+</script>
+<style>
+const suggestionsList = [
+    // Study & School
+    "Best study timetable", "How to focus on study", "School admission 2025", "Top schools in India", 
+    "Class 6 syllabus", "Best books for JNVST", "NCERT Class 6", "Scholarship for Class 6 students",
+
+    // General Knowledge & Current
+    "Current affairs 2025", "Who is the President of India", "ISRO latest news", 
+    "India's Chandrayaan mission", "Why sky is blue", "Most populated country 2025",
+
+    // Science & Math
+    "Science project ideas", "Math tricks for kids", "Periodic table song", "Physics easy concepts", 
+    "Area of circle formula", "LCM and HCF difference", "What is solar system", "Types of energy",
+
+    // English & Hindi
+    "English essay on my school", "Story in English for kids", "Hindi poem on nature", 
+    "Opposite words list", "Simple English sentences", "Translate Hindi to English",
+
+    // Entertainment & Fun
+    "Top movies 2025", "Most watched YouTube video", "Best cartoons for kids", 
+    "Minecraft download", "Funny riddles with answers", "Brain games online", 
+
+    // Spiritual & Culture
+    "Hanuman Chalisa lyrics", "Shree Krishna story", "Ramayan in short", "Sanskrit quotes", 
+    "Sawan 2025 start date", "Raksha Bandhan story", "National festivals of India",
+
+    // Daily Use
+    "Weather today", "Time in USA now", "How to set alarm", "Google Maps", 
+    "Nearest hospital", "Train ticket booking", "Bus route to school",
+
+    // Tech
+    "How to make website", "HTML full form", "How to download app", 
+    "Best coding app for kids", "AI meaning", "What is ChatGPT?",
+
+    // Health & Fitness
+    "Healthy food for students", "Morning exercise routine", "Surya Namaskar steps", 
+    "Why drink water in morning", "Benefits of yoga", "Vitamins for kids",
+
+    // Motivation & Quotes
+    "Success quotes", "Motivational speech for students", "Abdul Kalam quotes", 
+    "How to become topper", "Study motivation song", "Never give up quotes"
+];
+}
+.search-bar {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    gap: 10px;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    outline: none;
+    box-shadow: none;
+}
+.search-bar button {
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #e0e0e0;
+}
+    .dark-mode {
+        background-color: #121212;
+        color: white;
+    }
+    .dark-mode input[type="text"] {
+        background-color: #333;
+        color: white;
+    }
+    .dark-mode button {
+        background-color: #333;
+        color: white;
+    }
+</style>
+<style>
+#loader {
+    font-size: 16px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#loader::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+    <div class="logo">
+        <span>F</span><span>i</span><span>n</span><span>d</span><span>i</span>
+    </div>
+    <div class="search-bar">
+    <input id="searchInput" type="text" placeholder="Search Soogle or type a URL" oninput="showSuggestions()" autocomplete="off">
+    <button onclick="startListening()">🎤</button>
+    <ul id="suggestions" class="suggestion-box"></ul>
+	<button onclick="logout()">Logout</button>
+<script>
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "web.html";
+}
+</script>
+<button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+ <script>
+ function toggleDarkMode() {
+  document.body.style.backgroundColor = "black";
+  document.body.style.color = "white";
+}
+</script>
+<h2>Welcome to Dashboard</h2>
+
+<button onclick="downloadHistory()">📥 Download Login History</button>
+<button onclick="clearHistory()">🗑️ Clear History</button>
+
+<ul id="historyList"></ul>
+<script>
+  // Display login history
+  const loginHistory = JSON.parse(localStorage.getItem("loginHistory")) || [];
+  const historyList = document.getElementById("historyList");
+
+  if (loginHistory.length === 0) {
+    historyList.innerHTML = "<li>No login history found.</li>";
+  } else {
+    loginHistory.forEach(entry => {
+      const li = document.createElement("li");
+      li.innerText = `${entry.username} logged in at ${entry.time}`;
+      historyList.appendChild(li);
+    });
+  }
+
+  function downloadHistory() {
+    let content = "Login History:\n\n";
+    loginHistory.forEach(entry => {
+      content += `👤 ${entry.username} - ${entry.time}\n`;
+    });
+
+    const blob = new Blob([content], { type: 'text/plain' });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "login_history.txt";
+    link.click();
+  }
+
+  function clearHistory() {
+    localStorage.removeItem("loginHistory");
+    alert("Login history cleared!");
+    location.reload();
+  }
+</script>
+</div>
+<script>
+    const suggestionsList = [
+        "Sanskrit",
+        "Science facts",
+        "School admission",
+        "Soorya Namaskar",
+        "Sawan festival",
+        "Soorya bhagwan",
+        "Sahara Desert",
+        "Smart Study Tips",
+        "Samvid Gurukulam",
+        "Sainik School"
+    ];
+
+    function showSuggestions() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const suggestionBox = document.getElementById("suggestions");
+        suggestionBox.innerHTML = "";
+
+        if (!input) return;
+
+        const filtered = suggestionsList.filter(item => item.toLowerCase().includes(input));
+        filtered.forEach(suggestion => {
+            const li = document.createElement("li");
+            li.textContent = suggestion;
+            li.onclick = () => {
+                document.getElementById("searchInput").value = suggestion;
+                suggestionBox.innerHTML = "";
+            };
+            suggestionBox.appendChild(li);
+        });
+    }
+
+    // Close suggestions when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest(".search-bar")) {
+            document.getElementById("suggestions").innerHTML = "";
+        }
+    });
+
+    function startListening() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-IN';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            document.getElementById('searchInput').value = event.results[0][0].transcript;
+        };
+    }
+    function startListening() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-IN';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            document.getElementById('searchInput').value = event.results[0][0].transcript;
+        };
+    }
+</script>
+<script>
+function performSearch() {
+    const query = document.getElementById('searchInput').value;
+    if (query) {
+        document.getElementById('loader').style.display = 'block'; // Show loader
+
+        setTimeout(() => {
+            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.open(searchUrl, '_blank');
+
+            document.getElementById('loader').style.display = 'none'; // Hide loader
+        }, 1000); // Simulate loading delay
+    }
+}
+</script>
+<script>
+  const now = new Date();
+  document.write("📅 Today's Date: " + now.toLocaleDateString());
+</script>
+    </div>
+	<div id="loader" style="display:none; font-size: 18px; color: #666; margin-top: 15px;">🔄 Searching...</div>
+    <div class="buttons">
+        <button onclick="performSearch()">Findi Search</button>
+        <button onclick="performSearch()">I'm Feeling Lucky</button>
+    </div>
+	<div class="quick-links">
+    <button onclick="window.open('https://youtube.com', '_blank')">YouTube</button>
+    <button onclick="window.open('https://translate.google.com', '_blank')">Translate</button>
+</div>
+    <footer>
+        Findi offered in: English and Hindi only
+    </footer>
+</body>
+</html>
